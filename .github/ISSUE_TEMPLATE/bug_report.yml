@@ -1,0 +1,59 @@
+name: 🐛 Signaler un bug
+description: Un problème d'affichage, un plantage, un comportement inattendu
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Merci de prendre le temps de signaler ce problème ! Plus c'est précis, plus vite je peux le corriger.
+  - type: textarea
+    id: description
+    attributes:
+      label: Description du problème
+      description: Que se passe-t-il ? Qu'attendiez-vous à la place ?
+      placeholder: "Ex : le texte du bouton « Analyser » déborde et se chevauche avec l'icône."
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Comment le reproduire
+      description: Les étapes pour retomber sur le bug
+      placeholder: |
+        1. Ouvrir l'écran ...
+        2. Appuyer sur ...
+        3. Observer ...
+    validations:
+      required: false
+  - type: textarea
+    id: screenshot
+    attributes:
+      label: Capture d'écran
+      description: Glissez-déposez une image ici (indispensable pour les soucis d'alignement / de menu)
+    validations:
+      required: false
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Plateforme
+      options:
+        - Android
+        - iOS
+    validations:
+      required: true
+  - type: input
+    id: device
+    attributes:
+      label: Modèle d'appareil et version de l'OS
+      placeholder: "Ex : Samsung Galaxy S22, Android 14"
+    validations:
+      required: false
+  - type: input
+    id: app_version
+    attributes:
+      label: Version de l'app
+      description: Visible dans l'onglet Infos, en bas
+      placeholder: "Ex : 2.0.2"
+    validations:
+      required: false
